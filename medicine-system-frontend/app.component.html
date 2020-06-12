@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+</head>
+<body>
+    <div class="main">
+        <div class="card"> 
+            <form #s="ngForm" name="form"(ngSubmit)="onSubmit(s)">
+          <div class="form-group">
+              <label>Medicine Name</label>
+              <input name="medicine_name"   [(ngModel)]="med.medicine_name" type="text">
+          </div>
+          <div class="form-group">
+              <label>Medicine Description</label>
+              <input name="description"   [(ngModel)]="med.description" type="text">
+          </div>
+          <div class="form-group">
+              <label>Medicine Brand</label>
+              <input name="brand"   [(ngModel)]="med.brand" type="text" >
+          </div>
+          <div class="form-group">
+              <label>Medicine Price</label>
+              <input name="price"   [(ngModel)]="med.price"  type="number">
+          </div>
+          <div class="form-group">
+              <label>Medicine manufacturedate</label>
+              <input name="manufacture_date"   [(ngModel)]="med.manufacture_date"  type="date">
+          </div>
+          <div class="form-control">
+              <button type="submit" class="btn btn-lg btn-block">{{data}}</button>
+          </div>
+      </form>
+      </div>
+         
+          <br>
+
+          <div class="card">
+            <h2>Medicine Info</h2>
+            <br>
+            <table>
+               <thead>
+                 <th>id</th>
+                 <th>Medicine Name</th>
+                 <th>Description</th>
+                 <th>Brand</th>
+                 <th>manufacture Date</th>
+                 <th>Price</th>            
+                 
+                 
+               </thead>
+               <tbody>
+                 <tr *ngFor="let data of ItemsArray">
+                   <td>{{data.id}}</td>
+                   <td>{{data.medicine_name}}</td>
+                   <td>{{data.description}}</td>
+                   <td>{{data.brand}}</td>              
+                   <td>{{data.manufacture_date}}</td>
+                   <td>{{data.price}}</td> 
+                   <td> <button (click)="edit(data)" type="submit">Edit</button> </td>
+                 </tr>
+                 </tbody>
+                 </table>
+          </div>
+      
+         
+        
+    </div>
+  
+        
+    
+
+  
+</body>
+</html>

@@ -1,0 +1,18 @@
+.main{
+    background: lightcyan;
+    
+}
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+}
+thead{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+.mytable tr:nth-child(even){
+    background-color: #f2f2f2;
+}
